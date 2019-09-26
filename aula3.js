@@ -108,3 +108,31 @@ let dias = calcularDiasVividos(idade);
 //console.log(dias);
 
 console.log('Seu coração bateu ' + resultadoBpm * dias + ' minutos em sua vida até agora'
+
+* receber além da idade, os bmp do usuário
+
+let batidas = prompt('Informe sua Bpm');
+
+function calclBpm(){
+  let minutosDia = 60 * 24;
+  
+  return minutosDia * batidas;
+}
+
+
+
+let resultadoBpm = calclBpm();
+//console.log(resultado)
+
+function calcularDiasVividos(idade){
+  
+  return idade * 365
+  
+  
+}
+
+let idade = prompt('Diga sua idade')
+let dias = calcularDiasVividos(idade);
+//console.log(dias);
+
+console.log('Seu coração bateu ' + resultadoBpm * dias + ' minutos em sua vida até agora');
