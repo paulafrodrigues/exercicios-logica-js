@@ -87,13 +87,13 @@ let dias = calcularDiasVividos(idade);
 console.log(dias)
 
 /*7. Crie uma função que calcule quantos batidas por dia dá um coração, considerando que, ele bate a 70 bpm; Depois calcule quantas batidas o coração deu na vida da pessoa*/
-function calclBpm(){
+function calcularlBpm(){
   let minutosDia = 60 * 24;
   let batidas = 70;
   return minutosDia * batidas;
 }
 
-let resultadoBpm = calclBpm();
+let resultadoBpm = calcularBpm();
 //console.log(resultado)
 
 function calcularDiasVividos(idade){
