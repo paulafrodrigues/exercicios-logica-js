@@ -100,3 +100,23 @@ function retornarAngulo(numero){
   }
   
   console.log(retornarAngulo(prompt('Digite um número entre 0 e 360 que te direi o ângulo!')));
+
+/* 5. Baseado na tabela abaixo, retorne a classificação de um produto. */
+ 
+function classificacaoProduto(numero){
+  if(numero == 1){
+    return 'Alimento não-perecível'
+  }else if( numero == 2 || numero == 3 || numero == 4){
+    return 'Alimento perecível'
+  } else if(numero == 5 || numero == 6){
+    return 'Vestuário'
+  }else if(numero == 7){
+    return 'Higiene Pessoal'
+  }else if(numero >=8 && numero <=15){
+    return 'Limpeza e útensílios domésticos'
+  }else {
+    return 'Código Inválido!'
+  }
+}
+
+console.log(classificacaoProduto(prompt('Digite um numero!'));
