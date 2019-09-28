@@ -61,3 +61,17 @@ function informarPalindromo(palavra){
 
 console.log(informarPalindromo('dog'));
 console.log(informarPalindromo('ama'))
+
+/* 3. Faça uma função que dado um número, retorne se ele é par ou ímpar. */
+
+function parOuImpar(numero){
+  let resultado = numero/2;
+  
+  if(numero % 2 == 0){
+    return 'Par';
+  }else (numero % 2 !== 1)
+    return 'Ímpar';
+ 
+}
+
+console.log(parOuImpar(prompt('Digite um número inteiro')));
