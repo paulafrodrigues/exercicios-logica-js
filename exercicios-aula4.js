@@ -1,4 +1,4 @@
-/* 1. Crie um código que retorne a quantidade de pontos que seu time fez de 
+﻿/* 1. Crie um código que retorne a quantidade de pontos que seu time fez de 
 acordo com o resultado do jogo. (Se o seu time venceu, ele recebe 3 pontos. 
 Se o resultado foi empate, ele recebe 1 ponto. Se ele perdeu, não recebe nada.) */
 
@@ -119,4 +119,51 @@ function classificacaoProduto(numero){
   }
 }
 
-console.log(classificacaoProduto(prompt('Digite um numero!'));
+console.log(classificacaoProduto(prompt('Digite um numero!')));
+
+// com switch
+
+function classificacaoProduto(produto){
+
+switch (produto){
+  case '1':
+    console.log('Alimento não-perecível');
+  break;
+  
+  case '2':
+  case '3':
+  case '4':
+    console.log('Alimento perecível');
+  break;
+  
+  case '5':
+  case '6':
+      console.log('Vestuária');
+  break;
+   
+  case '7':
+    console.log('Higiene Pessoal')
+   break;
+    
+  case '8':
+  case '9':
+  case '10':
+  case '11':
+  case '12':
+  case '13':
+  case '14':
+  case '15':
+     console.log('Limpeza e utensílios domésticos')
+  break;
+  
+  default:
+    console.log('Código Inválido') 
+  
+}
+  }
+
+classificacaoProduto(prompt('Qual o numero do seu Produto?'));
+
+/* 6. Baseado na tabela abaixo, escreva um algoritmo que leia o código do item adquirido pelo consumidor e a quantidade, calculando e mostrando o valor a pagar. A mensagem de retorno deve conter o produto, a quantidade e o valor total a pagar. */
+
+
