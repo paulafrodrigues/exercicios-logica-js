@@ -75,3 +75,28 @@ function parOuImpar(numero){
 }
 
 console.log(parOuImpar(prompt('Digite um número inteiro')));
+
+/* 4. Faça uma função que dado um número, retorne a classificação do ângulo. 
+(Ângulo agudo: ângulo com medida maior que 0° menor que 90°; 
+Ângulo reto: ângulo com medida igual a 90°; 
+Ângulo obtuso: ângulo com medida maior que 90° e menor que 180°; 
+Ângulo raso: ângulo com medida igual a 0° ou 180°; Ângulo Côncavo: ângulo com 
+medida entre 180° e 360°; Ângulo completo: ângulo com medida igual a 360°). */
+
+function retornarAngulo(numero){
+    if(numero > 0 && numero < 90){
+    return numero + 'º ' + 'é um ângulo agudo.'
+    }else if(numero == 90){
+      return numero + 'º ' + 'é um ângulo reto.'
+    }else if(numero > 90 && numero < 180){
+      return numero + 'º ' + 'é um ângulo obtuso.'
+    }else if(numero == 0 || numero == 180){
+      return numero + 'º ' + 'é um ângulo raso.'
+    }else if(numero >=181 && numero <= 359){
+      return numero + 'º ' + 'é um ângulo côncavo.'
+    }else if(numero == 360){
+      return numero + 'º ' + 'é um ângulo completo!.'
+    }
+  }
+  
+  console.log(retornarAngulo(prompt('Digite um número entre 0 e 360 que te direi o ângulo!')));
