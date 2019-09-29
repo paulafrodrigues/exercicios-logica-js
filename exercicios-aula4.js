@@ -138,7 +138,7 @@ switch (produto){
   
   case '5':
   case '6':
-      console.log('Vestuária');
+      console.log('Vestuário');
   break;
    
   case '7':
@@ -166,4 +166,42 @@ classificacaoProduto(prompt('Qual o numero do seu Produto?'));
 
 /* 6. Baseado na tabela abaixo, escreva um algoritmo que leia o código do item adquirido pelo consumidor e a quantidade, calculando e mostrando o valor a pagar. A mensagem de retorno deve conter o produto, a quantidade e o valor total a pagar. */
 
+let item = prompt('Digite o código do produto')
+let quantidade = prompt('Quantos produtos comprou?')
 
+function valorFinaldoItem(item, quantidade){
+	if( item == '100'){
+	return 1.70 * quantidade
+	}else if (item == '101'){
+	return 2.30 * quantidade
+	}else if(item == '102'){
+	return 2.60 * quantidade
+	}else if(item == '103'){
+	return 2.40 * quantidade
+	}else if(item == '104'){
+	return 2.50 * quantidade
+	}else if(item == '105'){
+	return 1.00 * quantidade
+	}
+}
+
+let valorTotal = console.log(valorFinaldoItem(item, quantidade))
+
+function produtoEscolhido(item){
+if(item == '100'){
+return 'Cachorro quente'
+}else if (item == '101'){
+return 'Bauru Simples'
+}else if (item == '102'){
+return 'Bauru com ovo'
+}else if (item == '103'){
+return 'Hamburguer'
+}else if (item == '104'){
+return 'Cheeseburguer'
+}else if (item == '105'){
+return 'Refrigerante'
+	}
+}
+let nomeItem = console.log(produtoEscolhido(item))
+
+console.log('Você comprou ' + quantidade + '' + nomeItem + ' dando um total de R$' + valorTotal)
