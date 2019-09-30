@@ -37,7 +37,7 @@ switch (resultado){
   break;
   
   default:
-    console.log('Você não informou o resultado corretamente, diabo!');
+    console.log('Você não informou o resultado corretamente, diabo!')  
   
 }
   }
@@ -53,9 +53,9 @@ function informarPalindromo(palavra){
   let resultado = palavra.split('').reverse().join('');
      
   if(palavra === resultado){
-    return resultado + ' é um Palíndromo!';
+    return resultado + ' é um Palíndromo!'
   } else{
-    return resultado + ' não é um Palíndromo! =(';
+    return resultado + ' não é um Palíndromo! =('
   }
 }
 
@@ -74,20 +74,7 @@ function parOuImpar(numero){
  
 }
 
-console.log(parOuImpar(prompt('Digite um número inteiro')));
-
-// outra forma ex. 3
-
-function verificarParOuImpar(numero){
-  if (typeof numero !== 'number'){
-    return 'Errou, amigo!';
-  }
-  if(numero % 2 === 0){
-    return 'Número é par';
-  }else{
-    return 'ímpar';
-  }
-}
+console.log(parOuImpar());
 
 /* 4. Faça uma função que dado um número, retorne a classificação do ângulo. 
 (Ângulo agudo: ângulo com medida maior que 0° menor que 90°; 
@@ -97,46 +84,43 @@ function verificarParOuImpar(numero){
 medida entre 180° e 360°; Ângulo completo: ângulo com medida igual a 360°). */
 
 function retornarAngulo(numero){
-
     if(numero > 0 && numero < 90){
-    return numero + 'º ' + 'é um ângulo agudo.';
-    }else if(numero === 90){
-      return numero + 'º ' + 'é um ângulo reto.';
+    return numero + 'º ' + 'é um ângulo agudo.'
+    }else if(numero == 90){
+      return numero + 'º ' + 'é um ângulo reto.'
     }else if(numero > 90 && numero < 180){
-      return numero + 'º ' + 'é um ângulo obtuso.';
-    }else if(numero === 0 || numero === 180){
-      return numero + 'º ' + 'é um ângulo raso.';
+      return numero + 'º ' + 'é um ângulo obtuso.'
+    }else if(numero == 0 || numero == 180){
+      return numero + 'º ' + 'é um ângulo raso.'
     }else if(numero >=181 && numero <= 359){
-      return numero + 'º ' + 'é um ângulo côncavo.';
-    }else if(numero === 360){
-      return numero + 'º ' + 'é um ângulo completo!.';
-    }else{
-      return 'Ângulo não existe!';
+      return numero + 'º ' + 'é um ângulo côncavo.'
+    }else if(numero == 360){
+      return numero + 'º ' + 'é um ângulo completo!.'
     }
   }
   
-  console.log(retornarAngulo(prompt('Digite um número entre 0 e 360 que te direi o ângulo!')));
+  console.log(retornarAngulo());
 
 /* 5. Baseado na tabela abaixo, retorne a classificação de um produto. */
  
 function classificacaoProduto(numero){
-  if(numero === 1){
-    return 'Alimento não-perecível';
-  }else if( numero === 2 || numero === 3 || numero === 4){
-    return 'Alimento perecível';
-  } else if(numero === 5 || numero === 6){
-    return 'Vestuário';
-  }else if(numero === 7){
-    return 'Higiene Pessoal';
-  }else if(numero >= 8 && numero <= 15){
-    return 'Limpeza e útensílios domésticos';
+  if(numero == 1){
+    return 'Alimento não-perecível'
+  }else if( numero == 2 || numero == 3 || numero == 4){
+    return 'Alimento perecível'
+  } else if(numero == 5 || numero == 6){
+    return 'Vestuário'
+  }else if(numero == 7){
+    return 'Higiene Pessoal'
+  }else if(numero >=8 && numero <=15){
+    return 'Limpeza e útensílios domésticos'
   }else {
-    return 'Código Inválido!';
+    return 'Código Inválido!'
   }
 }
 
-console.log(classificacaoProduto(prompt('Digite um numero!'));
+console.log(classificacaoProduto());
+
+
 
 /* 7. Escreva um código que receba dois número e determine qual o maior entre eles. */
-
-
