@@ -20,15 +20,15 @@ for (let i = 0; i < arr.length; i++) {
 
 // 8. O Sr. Manoel Joaquim possui uma grande loja de artigos de R$ 1,99, com cerca de 10 caixas. Para agilizar o cálculo de quanto cada cliente deve pagar ele desenvolveu um tabela que contém o número de itens que o cliente comprou e ao lado o valor da conta. Desta forma a atendente do caixa precisa apenas contar quantos itens o cliente está levando e olhar na tabela de preços. Você foi contratado para desenvolver o programa que monta esta tabela de preços, que conterá os preços de 1 até 50 produtos, conforme o exemplo abaixo:
 
-Lojas Quase Dois - Tabela de preços
+// Lojas Quase Dois - Tabela de preços
 
-1 - R$ 1.99
+// 1 - R$ 1.99
 
-2 - R$ 3.98
+// 2 - R$ 3.98
 
-...
+// ...
 
-50 - R$ 99.50
+// 50 - R$ 99.50
 
 for( let i = 1; i <= 50; i++){
    console.log(i + ' - R$ ' + (i * 1.99)); 
@@ -36,9 +36,9 @@ for( let i = 1; i <= 50; i++){
    
 //   9. Faça um programa que peça um número inteiro e determine se ele é ou não um número primo. Um número primo é aquele que é divisível somente por ele mesmo e por 1.
 
-numeros primos só tem 2 divisores;
-numeros não primos tem mais de 2 divisores;
-o ultimo é o próprio divisor
+// numeros primos só tem 2 divisores;
+// numeros não primos tem mais de 2 divisores;
+// o ultimo é o próprio divisor
 
 let numero = 14;
 let divisores = 0;
@@ -51,11 +51,45 @@ for(let i = 1; i<= numero; i++){
 
 if(divisores === 2){
    console.log(numero + ' é primo');
+}else{
+   console.log(numero + ' não é primo');
+}
 
 
 //   10. A série de Fibonacci é formada pela seqüência 0,1,1,2,3,5,8,13,21,34,55,... Faça um programa capaz de gerar a série até o n−ésimo termo. 
 // a sequencia é a soma do numero anterior com o próximo
 // a sequencia vai sempre começar com 0, 1, então, o 3 número é sempre 1 + 0 = 1
+
+
+
+ function calcFibonacciSequence(n){ //o n é quantas posições você quer calcular, por exp os próximos 50 numeros da sequencia
+    if( n <= 0){
+       return []; // se ele me mostrar zero, não precisa retornar
+    }else if(n === 1){
+       return [0];
+    }else if(n === 2){
+       return [0, 1]
+    }else {
+      let fibonacciSeq = [0,1]; 
+      let n1 = 0;
+      let n2 = 1;
+
+      for (let i = 3; i <= n; i++){ //o i é a próxima posição do array que você vai calcular
+         let nextNumber = n1 + n2;
+         n1 = n2;
+         n2 = nextNumber;
+         fibbonacciSeq.push(nextNumber); //o push vai inserir os numeros no array
+      }
+      return fibonacciSeq;
+    }
+ }
+
+ console.log(calcFibonacciSequence(50));
+
+// proximo numero da sequencia é a soma dos dois anteriores
+// o primeiro número vira o segundo e o segundo numero vira a soma dos dois anteriores
+
+
 
 
 //   Nem tanto
